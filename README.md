@@ -12,7 +12,7 @@
 
 
 참고자료 
-https://jdh5202.tistory.com/756#google_vignette
-https://mabb.tistory.com/577
-https://xxsiyoung.tistory.com/3
-https://positivemh.tistory.com/1027
+- https://jdh5202.tistory.com/756#google_vignette
+- https://mabb.tistory.com/577
+- https://xxsiyoung.tistory.com/3
+- https://positivemh.tistory.com/1027
