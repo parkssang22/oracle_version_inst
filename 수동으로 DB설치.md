@@ -123,44 +123,51 @@ export PATH=$PATH:$ORACLE_HOME/bin
 
 ```bash
 [oracle@localhost ~]$ ls
-V17488-01.zip  V20606-01.zip  V28804-01.zip  공개      문서      비디오  서식
-V17532-01.zip  V20609-01.zip  V77117-01.zip  다운로드  바탕화면  사진    음악
+V17488-01.zip       V17530-01_2of2.zip  V20606-01.zip  공개      문서      비디오  서식
+V17530-01_1of2.zip  V17532-01.zip       V20609-01.zip  다운로드  바탕화면  사진    음악
+
 ```
 
 ## 오라클 DB 서버 폴더 압축 풀기
 ```bash
 [oracle@localhost ~]$ ls -lh
-합계 5.2G
--rw-rw-r--. 1 oracle oinstall 613M  4월 15 15:49 V17488-01.zip
--rw-rw-r--. 1 oracle oinstall 674M  4월 15 15:50 V17532-01.zip
--rw-rw-r--. 1 oracle oinstall 653M  4월 15 15:49 V20606-01.zip
--rw-rw-r--. 1 oracle oinstall 588M  4월 15 15:51 V20609-01.zip
--rw-rw-r--. 1 oracle oinstall 722M  4월 15 15:50 V28804-01.zip
--rw-rw-r--. 1 oracle oinstall 2.0G  4월 15 15:48 V77117-01.zip
+합계 4.7G
+-rw-r--r--. 1 oracle oinstall 613M  4월 15 16:48 V17488-01.zip
+-rw-r--r--. 1 oracle oinstall 1.2G  4월 15 16:49 V17530-01_1of2.zip
+-rw-r--r--. 1 oracle oinstall 1.1G  4월 15 16:47 V17530-01_2of2.zip
+-rw-r--r--. 1 oracle oinstall 674M  4월 15 16:49 V17532-01.zip
+-rw-r--r--. 1 oracle oinstall 653M  4월 15 16:50 V20606-01.zip
+-rw-r--r--. 1 oracle oinstall 588M  4월 15 16:50 V20609-01.zip
 
-# 가장 용량이 큰 2G가 Oracle Database 11.2.0.4 서버
+# 가장 용량이 큰 것이 Oracle Database 11.2.0.1 서버
 
-[oracle@localhost ~]$ unzip V77117-01.zip
+[oracle@localhost ~]$ unzip V17530-01_1of2.zip
 Archive:  V77117-01.zip
   inflating: AAA_README_FIRST.TXT
   inflating: unzip_db11204.com
  extracting: db11204.zip
 
-[oracle@localhost ~]$ unzip db11204.zip
+[oracle@localhost ~]$ unzip V17530-01_2of2.zip
 
 ```
 ## 실행
 ```bash
 [oracle@localhost ~]$ ls -F
-AAA_README_FIRST.TXT*  V17532-01.zip  V28804-01.zip  unzip_db11204.com*  문서/      사진/
-Disk1/                 V20606-01.zip  V77117-01.zip  공개/               바탕화면/  서식/
-V17488-01.zip          V20609-01.zip  db11204.zip*   다운로드/           비디오/    음악/
-[oracle@localhost ~]$ cd Disk1
-[oracle@localhost Disk1]$ ls
-install  response  runInstaller.com  stage
-[oracle@localhost Disk1]$ ./runInstaller
+V17488-01.zip       V17530-01_2of2.zip  V20606-01.zip  database/  다운로드/  바탕화면/  사진/  음악/
+V17530-01_1of2.zip  V17532-01.zip       V20609-01.zip  공개/      문서/      비디오/    서식/
+
+[oracle@localhost ~]$ cd database
+[oracle@localhost database]$ ls
+install  response  rpm  runInstaller  sshsetup  stage  welcome.html
+
+[oracle@localhost database]$ LANG=C ./runInstaller
+Starting Oracle Universal Installer...
+
+Checking Temp space: must be greater than 120 MB.   Actual 31716 MB    Passed
+Checking swap space: must be greater than 150 MB.   Actual 5119 MB    Passed
+Checking monitor: must be configured to display at least 256 colors.    Actual 16777216    Passed
+Preparing to launch Oracle Universal Installer from /tmp/OraInstall2026-04-15_05-18-38PM. Please wait ...[oracle@localhost database]$
+
 ```
 
-참고자료 
-https://jdh5202.tistory.com/756#google_vignette
-https://mabb.tistory.com/577
+
