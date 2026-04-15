@@ -44,3 +44,6 @@
 ## oracle 계정을 생성한다
 <img width="796" height="662" alt="oracle 계정을 생성한다" src="https://github.com/user-attachments/assets/1281223d-7bc4-4fbd-8426-acc4a9c1ddda" />
 
+## 재부팅 버튼을 누른다
+<img width="790" height="662" alt="재부팅" src="https://github.com/user-attachments/assets/6628a553-4c07-4618-a515-7e6744254531" />
+
